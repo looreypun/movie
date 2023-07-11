@@ -59,15 +59,18 @@ class Logic extends Model
     public function query_tmdv($param ,$search){
         $url = 'https://api.themoviedb.org/3/';
         $api_key = '?api_key=0228e2d3e85505e47f5df753920408c9&';
-        $full_url = $url.$param.$api_key.$search;
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_ENCODING, '');
-        curl_setopt($ch, CURLOPT_URL,$full_url);
-        curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4 );
-        $result=curl_exec($ch);
-        curl_close($ch);
+        $full_url = $url . $param . $api_key . $search;
+    
+        $options = [
+            'http' => [
+                'method' => 'GET',
+                'header' => 'Content-type: application/json',
+            ],
+        ];
+        $context = stream_context_create($options);
+        $result = file_get_contents($full_url, false, $context);
         $response = json_decode($result, true);
+    
         return $response;
     }
 
@@ -81,14 +84,18 @@ class Logic extends Model
         $url = 'https://api.themoviedb.org/3/movie/';
         $api_key = '?api_key=0228e2d3e85505e47f5df753920408c9&append_to_response=videos&language=';
         $full_url = $url.$id.$api_key.$lang;
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_URL,$full_url);
-        curl_setopt($ch, CURLOPT_ENCODING , "gzip");
-        curl_setopt($ch, CURLOPT_ENCODING, '');
-        $result=curl_exec($ch);
-        curl_close($ch);
+
+        $options = [
+            'http' => [
+                'method' => 'GET',
+                'header' => 'Content-type: application/json',
+            ],
+        ];
+
+        $context = stream_context_create($options);
+        $result = file_get_contents($full_url, false, $context);
         $response = json_decode($result, true);
+
         return $response;
     }
 
@@ -96,14 +103,18 @@ class Logic extends Model
         $url = 'https://api.themoviedb.org/3/movie/';
         $api_key = '/credits?api_key=0228e2d3e85505e47f5df753920408c9&language=';
         $full_url = $url.$id.$api_key.$lang;
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_URL,$full_url);
-        curl_setopt($ch, CURLOPT_ENCODING , "gzip");
-        curl_setopt($ch, CURLOPT_ENCODING, '');
-        $result=curl_exec($ch);
-        curl_close($ch);
+
+        $options = [
+            'http' => [
+                'method' => 'GET',
+                'header' => 'Content-type: application/json',
+            ],
+        ];
+
+        $context = stream_context_create($options);
+        $result = file_get_contents($full_url, false, $context);
         $response = json_decode($result, true);
+
         return $response;
     }
 
