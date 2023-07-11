@@ -1,0 +1,284 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.btn{
+    font-size:14px;
+    cursor:pointer;
+}
+
+.navbar-nav > li > a {padding-top:5px !important; padding-bottom:5px !important;}
+.navbar {min-height:32px !important}
+
+.main_section, .carousel{
+    background-color:#17202A ;
+}
+
+.content{
+    background-color:#17202A ;
+    height:100vh;
+}
+
+#slide-parent{
+  height:60vh;
+}
+
+#slide-details{
+    position:absolute;
+    left:0.5%;
+    bottom:5px;
+    height:auto;
+    width:40%;
+    opacity:0.7;
+    color:white;
+    padding:5px;
+    font-size:14px;
+    background-color:black;
+
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    color: green;
+}
+
+
+
+.copyright{
+    height:5vh;
+    width:100%;
+}
+
+.index-input{
+    height:55px;
+    width:50%;
+}
+
+.social-link{
+    border-radius:5%;
+    color:white;
+
+}
+#facebook{
+    background-color:#3498DB;
+}
+#twitter{
+    background-color:#1F618D ;
+}
+#instagram{
+    background-color:#D35400 ;
+}
+
+.center{
+  position:relative;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  margin-top:-90px;
+}
+
+.display_img{
+    width:100%;
+    height:80%;
+    border-radius:2%;
+    box-shadow:0px 1px 2px grey;
+}
+
+footer{
+    background:#283747 ;
+    height:30vh;
+    width:100%;
+}
+
+#mobile_footer{
+  display:none;
+}
+
+footer div p, footer div h4 {
+    color:grey;
+}
+footer p{
+    font-size:16px;
+}
+
+.copyright p{
+    text-align:center;
+    font-size:14px;
+    vertical-align: center;
+}
+
+
+/*  scroll bar */
+
+#scroll{
+    display:flex;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+}
+#scroll-element{
+    flex:0 0 auto;
+}
+
+#poster{
+    height:80%;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+  #poster{
+    display:none;
+  }
+  #slide-parent{
+    height:auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    #poster{
+        display:none;
+    }
+    #login{
+margin-bottom:10px;}
+
+    .copyright p {
+        font-size:10px;
+    }
+    .main-button{
+        font-size:10px;
+    }
+
+    .social-link{
+        font-size:15px;
+        padding:0px 3px;
+    }
+    p{
+        font-size:12px;
+    }
+
+    .index-input{
+        height:40px;
+
+    }
+    a .btn, p .btn, div .btn{
+        font-size:10px;
+    }
+    input::-webkit-input-placeholder {
+         font-size:12px;
+    }
+    #error-msg{
+     font-size:22px;
+    }
+    #mobile_footer{
+        display:block;
+
+    }
+    #mobile_footer p{
+    font-size:10px;
+    }
+    #desktop_footer{
+        display:none;
+    }
+    footer{
+        background:#283747 ;
+        height:220px;
+        width:100%;
+    }
+
+
+}
+
+@media only screen and (max-width: 375px) {
+#suggestions,#hot{
+    display:none;
+}
+
+}
+
+#overlay{
+    position:fixed;
+    z-index:99999;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background:rgba(0,0,0,0.9);
+    transition: 1s 0.4s;
+}
+#progress{
+    height:1px;
+    background:#fff;
+    position:absolute;
+    width:0;
+    top:50%;
+ }
+#progstat{
+    font-size:0.7em;
+    letter-spacing: 3px;
+    position:absolute;
+    top:50%;
+    margin-top:-40px;
+    width:100%;
+    text-align:center;
+    color:#fff;
+}
+
+
+/* login css */
+.login-container{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    height:100vh;
+}
+.login-logo{
+    position: relative;
+    margin-left: -41.5%;
+}
+.login-logo img{
+    position: absolute;
+    width: 20%;
+    margin-top: 19%;
+    background: #282726;
+    border-radius: 4.5rem;
+    padding: 5%;
+}
+.login-form-1{
+    padding: 9%;
+    background:#282726;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    margin-bottom:12%;
+    color:#fff;
+}
+.login-form-2{
+    padding: 9%;
+    background: #f05837;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    text-align: center;
+    margin-bottom:12%;
+    color: #fff;
+}
+.btnSubmit{
+    font-weight: 600;
+    width: 50%;
+    color: #282726;
+    background-color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    padding:2%;
+}
+.btnForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btnForgetPwd:hover{
+    text-decoration:none;
+    color:#fff;
+}
