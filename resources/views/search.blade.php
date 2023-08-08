@@ -11,7 +11,7 @@
         @foreach($search_data as $item)
             @if(!empty($item->poster_path))
             <div class="col-6 col-md-4 col-xl-2">
-            <a href="/play/{{$item->id}}.'"><img class="display_img" src="https://image.tmdb.org/t/p/w500{{$item->poster_path}}"  width="100%" height="100%" ></a>
+            <a href="play/{{$item->id}}.'"><img class="display_img" src="https://image.tmdb.org/t/p/w500{{$item->poster_path}}"  width="100%" height="100%" ></a>
             {{-- <p style="font-size:14px" id="movie_title">{{$item->original_title}}</p> --}}
             </div>
             @endif
