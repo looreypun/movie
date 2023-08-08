@@ -18,14 +18,14 @@ window.onload =function(){
 <div class="main_section px-4">
     <div class="movie_category pt-3">
         <p class="btn btn-danger"><i class="fas fa-folder"></i>　見た映画</p>
-        <a href="/index"><p class="btn btn-dark  float-right ">戻る</p></a>
+        <a href="index"><p class="btn btn-dark  float-right ">戻る</p></a>
     </div>
         <div class="row">
         @if(!empty($liked_list))
         @foreach($liked_list as $item)
             <div class="col-6 col-md-3 col-xl-2">
-            <a href="/play/{{$item['id']}}"><img class="display_img" src="https://image.tmdb.org/t/p/w500{{$item['poster_path']}}"  width="100%" height="100%" ></a>
-            <a href="/remove/movie?movie_id={{$item['id']}}" class="nav-link"><p class="btn btn-danger mt-2 d-flex justify-content-center">Remove</p><a>
+            <a href="play/{{$item['id']}}"><img class="display_img" src="https://image.tmdb.org/t/p/w500{{$item['poster_path']}}"  width="100%" height="100%" ></a>
+            <a href="remove/movie?movie_id={{$item['id']}}" class="nav-link"><p class="btn btn-danger mt-2 d-flex justify-content-center">Remove</p><a>
             </div>
         @endforeach
         @else
