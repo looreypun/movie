@@ -5,7 +5,7 @@
     <p class="btn btn-danger">{{$name}} <span class=" ml-2">{{ $rank_order}}</span></p>
     <i id="grid" style="font-size:28px;cursor:pointer" class="fas fa-th ml-3"></i>
     <i id="list" style="font-size:28px;cursor:pointer" class="fas fa-th-list ml-2"></i>
-    <a href="/index"><p class="btn btn-dark float-right ">戻る</p></a>
+    <a href="index"><p class="btn btn-dark float-right ">戻る</p></a>
 </div>
 <div>
     <form method="get" action="/ranking">
@@ -33,7 +33,7 @@
         <p class="font-weight-bold mt-4 ml-3  text-secondary"><span class="ml-5">{{$key+1 }}</span>{{ strtoupper($item->original_title) }}</p>
         <div id="ranking" class="row px-4">
             <div class="col-12 col-md-3 col-lg-2">
-            <a href="/play/{{$item->id}}"><img class="thumbnail" src="https://image.tmdb.org/t/p/w154{{$item->poster_path}}" ></a>
+            <a href="play/{{$item->id}}"><img class="thumbnail" src="https://image.tmdb.org/t/p/w154{{$item->poster_path}}" ></a>
             </div>
 
             <div class="col-12 col-md-9 col-lg-4 mt-2 ">
@@ -58,7 +58,7 @@
                     </div>
 
                     <div class="col-12 mt-5" >
-                        <a href="/play/{{$item->id}}"><p class="btn btn-danger font-weight-bold text-light">Watch <i class="far fa-play-circle"></i></p></a>
+                        <a href="play/{{$item->id}}"><p class="btn btn-danger font-weight-bold text-light">Watch <i class="far fa-play-circle"></i></p></a>
                     </div>
                 </div>
             </div>
