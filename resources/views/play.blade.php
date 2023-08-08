@@ -42,7 +42,7 @@ window.onload =function(){
 @endif
 <div id="light-div" class="main_section">
     <div class="container">
-        <a href="/index"><p class="btn btn-dark btn-sm float-right mt-2 ">戻る</p></a>
+        <a href="index"><p class="btn btn-dark btn-sm float-right mt-2 ">戻る</p></a>
         <p class="pt-3 text-dark  ">ホーム<i class="fas fa-caret-right ml-2 text-dark"></i> 映画<i class="fas fa-caret-right ml-2 text-dark"></i><span class=" ml-2 text-success ">{{ strtoupper($play_data['title']) }}</span></p>
         @if($play_data['video_id']==null)
         <p class="text-danger">Sorry video file doesnot exist</p>
@@ -54,7 +54,7 @@ window.onload =function(){
             <div class="d-flex mt-2 px-2">
             <p class="font-weight-bold text-dark d-none d-md-block"><span class="text-primary"> WATCH </span>{{strtoupper($play_data['title'])}} <span class="btn btn-dark btn-sm text-light font-weight-bold">4K</span></p>
             @auth()
-            <a href="/add?movie_id={{$play_data['id']}}"><p id="add" class="btn btn-dark btn-sm ml-2" data-toggle="tooltip" data-placement="top" title="マイリストに追加しますか?"><i class="fas fa-plus-square"></i></p></a>
+            <a href="add?movie_id={{$play_data['id']}}"><p id="add" class="btn btn-dark btn-sm ml-2" data-toggle="tooltip" data-placement="top" title="マイリストに追加しますか?"><i class="fas fa-plus-square"></i></p></a>
             <p id="like-box-day"><i id="like" class="fas fa-thumbs-up btn btn-primary btn-sm ml-2 "> いいね {{ $total_likes }}</i></p>
             @endauth
             @guest()
