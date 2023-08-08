@@ -227,7 +227,7 @@ window.onload =function(){
         <div id="scroll" class="row mt-3 px-4">
             @foreach($similar_data as $item)
             <div  class="col-6 col-md-3">
-            <a href="/play/{{$item->id}}"><img class="display_img" src="https://image.tmdb.org/t/p/w500{{$item->poster_path}}"  width="100%" height="100%" ></a>
+            <a href="play/{{$item->id}}"><img class="display_img" src="https://image.tmdb.org/t/p/w500{{$item->poster_path}}"  width="100%" height="100%" ></a>
             </div>
             @endforeach
         </div>
@@ -238,7 +238,7 @@ window.onload =function(){
 <!-- Dark Mode -->
 <div id="dark-div" class="main_section d-none" style="background:black">
     <div class="container">
-            <a href="/index" class="btn btn-light btn-sm  float-right mt-3 ">戻る</a>
+            <a href="index" class="btn btn-light btn-sm  float-right mt-3 ">戻る</a>
             <p class=" pt-3 text-light  ">ホーム<i class="fas fa-caret-right ml-2 text-light"></i> 映画<i class="fas fa-caret-right ml-2 text-light"></i><span class=" ml-2 text-success ">{{ strtoupper($play_data['title']) }}</span></p>
             @if($play_data['video_id']==null)
             <p class="text-danger">Sorry video file doesnot exist</p>
@@ -250,7 +250,7 @@ window.onload =function(){
             <div class="d-flex mt-2 px-2">
                 <p class="font-weight-bold text-light d-none d-md-block"><span class="text-primary "> WATCH </span>{{strtoupper($play_data['title'])}} <span class="btn btn-primary btn-sm text-light font-weight-bold">4K</span></p>
             @auth()
-            <a href="/add?movie_id={{$play_data['id']}}"><p id="add" class="btn btn-light btn-sm ml-2" data-toggle="tooltip" data-placement="top" title="マイリストに追加しますか?"><i class="fas fa-plus-square"></i></p></a>
+            <a href="add?movie_id={{$play_data['id']}}"><p id="add" class="btn btn-light btn-sm ml-2" data-toggle="tooltip" data-placement="top" title="マイリストに追加しますか?"><i class="fas fa-plus-square"></i></p></a>
             <p id="dark-like-box"><i id="dark-like" class="fas fa-thumbs-up btn btn-primary btn-sm ml-2 "> いいね {{ $total_likes }}</i></p>
             @endauth
             @guest()
