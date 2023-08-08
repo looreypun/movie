@@ -27,7 +27,7 @@ window.onload =function(){
     @foreach ($carousel_data as $item)
             @if($loop->first)
             <div id="slide-parent" class=" carousel-item active">
-            <a href="/play/{{$item->id}}"><img  class="background-img d-block w-100" src="https://image.tmdb.org/t/p/original{{ $item->backdrop_path}}" alt="First slide"></a>
+            <a href="play/{{$item->id}}"><img  class="background-img d-block w-100" src="https://image.tmdb.org/t/p/original{{ $item->backdrop_path}}" alt="First slide"></a>
                 <div class="d-none d-xl-block" id="slide-details">
                     <h4>タイトル : {{ $item->original_title}}</h4>
                     <p style="font-size:14px" class="mt-2"> {{$item->overview}}</p>
@@ -45,7 +45,7 @@ window.onload =function(){
             </div>
             @else
             <div id="slide-parent" class=" carousel-item">
-                <a href="/play/{{$item->id}}"><img  class="background-img d-block w-100" src="https://image.tmdb.org/t/p/original{{ $item->backdrop_path}}" alt="First slide"></a>
+                <a href="play/{{$item->id}}"><img  class="background-img d-block w-100" src="https://image.tmdb.org/t/p/original{{ $item->backdrop_path}}" alt="First slide"></a>
                     <div class="d-none d-xl-block" id="slide-details">
                         <h4 >タイトル : {{ $item->original_title}}</h4>
                         <p style="font-size:14px" class="mt-2"> {{$item->overview}}</p>
@@ -85,7 +85,7 @@ window.onload =function(){
 <div style="background:#ECF0F1;font-family: 'Noto Serif JP', serif;" class="pl-4 mt-3">
     <p  class="toogle-text text-dark pt-2">あなたの心を豊かにする映画を紹介 | おすすめ映画の紹介サイト</p>
     <p class="text-danger font-weight-bold"><i class="fas fa-exclamation-circle"></i> お知らせ</p>
-    <a href="/notice">HQMオンデマンドのサービス内容変更について</a>
+    <a href="notice">HQMオンデマンドのサービス内容変更について</a>
     <div class="social d-flex pb-4 mt-2">
         <div id="facebook" class="social-link text-center "><a target="_blank" class="text-light nav-link" href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a></div>
         <div id="twitter" class="social-link text-center ml-2"><a target="_blank" class="text-light nav-link" href="https://twitter.com/login?lang=en"><i class="fab fa-twitter-square"></i></a></div>
@@ -127,7 +127,7 @@ window.onload =function(){
             @foreach($popular_data as $item)
             @if(!empty($item->poster_path))
                 <div id="desktop-div" class="col-6 col-md-3 col-xl-2">
-                <a href="/play/{{$item->id}}"><img class="display_img" src="https://image.tmdb.org/t/p/w500{{$item->poster_path}}"  width="100%" height="100%" ></a>
+                <a href="play/{{$item->id}}"><img class="display_img" src="https://image.tmdb.org/t/p/w500{{$item->poster_path}}"  width="100%" height="100%" ></a>
                 </div>
                 <!-- <p style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);font-size:24px"><i  class="far fa-play-circle"></i></p> -->
             @endif
@@ -147,7 +147,7 @@ window.onload =function(){
             @foreach($now_playing_data as $item)
             @if(!empty($item->poster_path))
                 <div style="relative"  class="col-6 col-md-3 col-xl-2">
-                <a href="/play/{{$item->id}}"><img class="display_img" src="https://image.tmdb.org/t/p/w500{{$item->poster_path}}"  width="100%" height="100%" ></a>
+                <a href="play/{{$item->id}}"><img class="display_img" src="https://image.tmdb.org/t/p/w500{{$item->poster_path}}"  width="100%" height="100%" ></a>
                 </div>
 
             @endif
@@ -166,7 +166,7 @@ window.onload =function(){
             @foreach($dramas_data as $item)
             @if(!empty($item->poster_path))
                 <div id="desktop-div" class="col-6 col-md-3 col-xl-2">
-                <a href="/play/{{$item->id}}"><img class="display_img" src="https://image.tmdb.org/t/p/w500{{$item->poster_path}}"  width="100%" height="100%" ></a>
+                <a href="play/{{$item->id}}"><img class="display_img" src="https://image.tmdb.org/t/p/w500{{$item->poster_path}}"  width="100%" height="100%" ></a>
                 </div>
             @endif
             @endforeach
@@ -176,7 +176,7 @@ window.onload =function(){
     <div class="main_section">
         <div id="genre_selector" class=" movie_category pt-3 px-4">
           <p class="btn btn-danger ">{{ strtoupper($genre_name)}}</p>
-          <a href="/index"><p class="btn btn-dark  float-right ">戻る</p></a>
+          <a href="index"><p class="btn btn-dark  float-right ">戻る</p></a>
 
         </div>
 
@@ -187,7 +187,7 @@ window.onload =function(){
             @foreach($genre_data as $item)
             @if(!empty($item->poster_path))
                 <div id="desktop-div" class="col-6 col-md-3 col-xl-2">
-                <a href="/play/{{$item->id}}"><img class="display_img" src="https://image.tmdb.org/t/p/w500{{$item->poster_path}}"  width="100%" height="100%" ></a>
+                <a href="play/{{$item->id}}"><img class="display_img" src="https://image.tmdb.org/t/p/w500{{$item->poster_path}}"  width="100%" height="100%" ></a>
                 </div>
             @endif
             @endforeach
