@@ -4,7 +4,7 @@
 <div class="main_section ml-5">
     <div class="movie_category pt-3 px-4">
         <p class="btn btn-danger">お知らせ</p>
-        <a href="/index"><p class="btn btn-dark float-right ">戻る</p></a>
+        <a href="index"><p class="btn btn-dark float-right ">戻る</p></a>
     </div>
     <p class="mt-4">2020年12月31日リリース情報</p>
     <h2 class="font-weight-bold">HQMオンデマンドのサービス内容変更について</h2>
